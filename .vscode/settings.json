@@ -1,0 +1,15 @@
+{
+  /* Editor */
+  "editor.defaultFormatter": "esbenp.prettier-vscode",
+  /* Files */
+  "files.associations": {
+    ".prettierrc": "jsonc",
+    "*.env": "properties",
+    ".env.*": "properties",
+    "*.css": "tailwindcss"
+  },
+  /* Other */
+  "git.branchPrefix": "feature/",
+  "npm.packageManager": "npm",
+  "javascript.preferences.importModuleSpecifierEnding": "js"
+}
