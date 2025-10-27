@@ -109,7 +109,7 @@ export const tanstackRouterConfig = defineConfig(
       "@tanstack/router/create-route-property-order": "error",
     },
   },
-  // Enforce route specific filename conventions
+  /* Enforce route specific filename conventions */
   {
     files: ["src/router/routes/**/*.tsx"],
     ignores: [
@@ -147,7 +147,7 @@ export const tanstackRouterConfig = defineConfig(
       ],
     },
   },
-  // Disable filename conventions
+  /* Disable filename conventions */
   {
     files: [
       // Disable filename conventions for routes

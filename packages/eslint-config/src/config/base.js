@@ -2,7 +2,6 @@ import eslint from "@eslint/js";
 import tanstackQueryPlugin from "@tanstack/eslint-plugin-query";
 import { defineConfig } from "eslint/config";
 import checkFilePlugin from "eslint-plugin-check-file";
-import i18next from "eslint-plugin-i18next";
 import importPlugin from "eslint-plugin-import";
 import noRelativeImportPaths from "eslint-plugin-no-relative-import-paths";
 import prettierPluginRecommended from "eslint-plugin-prettier/recommended";
@@ -48,7 +47,6 @@ import { commonIgnores } from "../utilities/utilities.js";
 export const baseConfig = defineConfig(
   commonIgnores,
   eslint.configs.recommended,
-  i18next.configs["flat/recommended"],
   prettierPluginRecommended,
   /* Rules for all js/ts files */
   {
@@ -168,9 +166,9 @@ export const baseConfig = defineConfig(
       "react-hooks/rules-of-hooks": "error",
       "react-hooks/react-compiler": "off",
       // tsdoc
-      eqeqeq: "error",
       "tsdoc/syntax": "off",
       // other
+      eqeqeq: "error",
       "no-prototype-builtins": "off",
       // https://typescript-eslint.io/troubleshooting/faqs/eslint/#i-get-errors-from-the-no-undef-rule-about-global-variables-not-being-defined-even-though-there-are-no-typescript-errors
       "no-undef": "off",
@@ -178,7 +176,7 @@ export const baseConfig = defineConfig(
       "prefer-const": "warn",
     },
   },
-  // Disable filename conventions
+  /* Disable filename conventions */
   {
     files: [
       "src/main.tsx",
@@ -192,7 +190,7 @@ export const baseConfig = defineConfig(
       "check-file/filename-naming-convention": "off",
     },
   },
-  // Disable certain rules for shadcn components
+  /* Disable certain rules for shadcn components */
   {
     files: ["src/components/shadcn/**/*"],
     rules: {
@@ -200,7 +198,7 @@ export const baseConfig = defineConfig(
       "react/forbid-elements": "off",
     },
   },
-  // Allow default exports
+  /* Allow default exports */
   {
     files: ["eslint.config.*", "src/types/global/**/*", "**/codegen/**/*"],
     rules: {
