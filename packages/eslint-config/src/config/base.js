@@ -14,23 +14,9 @@ import tseslint from "typescript-eslint";
 import { commonIgnores } from "../utilities/utilities.js";
 
 /**
- * ### TanStack Router ESLint Configuration
+ * ### Base ESLint Configuration
  *
- * This configuration configures ESLint for use in project
- * with a TanStack Router setup.
- *
- * This eslint config expects a specific routes directory in
- * the `tanstackRouter` plugin in `vite.config.ts` to work correctly.
- *
- * ```js
- * // vite.config.ts
- * plugins: [
-      tanstackRouter({
-        target: "react",
-        routesDirectory: "./src/router/routes",
-      }),
-    ]
- * ```
+ * This configuration configures ESLint for use in a React project.
  *
  * This eslint config works well with a route alias setup in the `tsconfig.json` file.
  *
