@@ -13,8 +13,9 @@ export default defineConfig(
   {
     files: ["**/*"],
     rules: {
-      // import
+      "check-file/filename-naming-convention": "off",
       "import/no-default-export": "off",
+      "no-relative-import-paths/no-relative-import-paths": "off",
     },
   },
 );

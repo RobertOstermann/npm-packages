@@ -37,6 +37,7 @@
   },
   "scripts": {
     "preinstall": "npx only-allow npm",
+    "prepublish": "npm run build",
     "build": "rm -rf dist && tsc",
     "ts:check": "tsc --skipLibCheck --noEmit",
     "lint": "eslint src",
