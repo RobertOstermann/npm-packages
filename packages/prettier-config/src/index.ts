@@ -32,7 +32,7 @@ import type { Config } from "prettier";
  */
 const config: Config = {
   /* Formatting */
-  printWidth: 100,
+  printWidth: 80,
   tabWidth: 2,
   /* Plugins */
   plugins: ["prettier-plugin-ignored"],
