@@ -48,7 +48,7 @@ export const baseConfig = defineConfig(
   commonIgnores,
   eslint.configs.recommended,
   prettierPluginRecommended,
-  /* Rules for all js/ts files */
+  // Rules for all js/ts files
   {
     files: ["**/*.js", "**/*.jsx", "**/*.ts", "**/*.tsx"],
     plugins: {
@@ -84,7 +84,7 @@ export const baseConfig = defineConfig(
       "simple-import-sort/exports": "error",
     },
   },
-  /* Rules for all ts files */
+  // Rules for all ts files
   {
     files: ["**/*.ts", "**/*.tsx"],
     plugins: {
@@ -176,7 +176,7 @@ export const baseConfig = defineConfig(
       "prefer-const": "warn",
     },
   },
-  /* Disable filename conventions */
+  // Disable filename conventions
   {
     files: [
       "src/main.tsx",
@@ -190,15 +190,7 @@ export const baseConfig = defineConfig(
       "check-file/filename-naming-convention": "off",
     },
   },
-  /* Disable certain rules for shadcn components */
-  {
-    files: ["src/components/shadcn/**/*"],
-    rules: {
-      "no-restricted-imports": "off",
-      "react/forbid-elements": "off",
-    },
-  },
-  /* Allow default exports */
+  // Allow default exports
   {
     files: ["eslint.config.*", "src/types/global/**/*", "**/codegen/**/*"],
     rules: {
