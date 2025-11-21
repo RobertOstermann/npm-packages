@@ -30,7 +30,7 @@ import { commonIgnores } from "../utilities/utilities.js";
  * import { baseConfig, tailwindConfig } from "@ostermann/eslint-config";
  *
  * export default defineConfig({
- *   extends: [baseConfig, tailwindConfig({ stylesheet: "src/styles/tailwind.css" })],
+ *   extends: [baseConfig, tailwindConfig({ entryPoint: "src/styles/tailwind.css" })],
  * });
  * ```
  *
