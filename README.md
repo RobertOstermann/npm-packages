@@ -16,13 +16,13 @@ multiple projects to promote consistency and best practices within the organizat
 Each package is published independently to npm and can be installed via `npm`:
 
 ```sh
-npm install @ostermann/eslint-config --save-dev
-npm install @ostermann/prettier-config --save-dev
+npm install --save-dev --save-exact @ostermann/eslint-config
+npm install --save-dev --save-exact @ostermann/prettier-config
 ```
 
 See the documentation of individual packages for their usage.
 
 ## Docs
 
-- [eslint-config](./eslint-config/README.md)
-- [prettier-config](./prettier-config/README.md)
+- [eslint-config](./packages/eslint-config/README.md)
+- [prettier-config](./packages/prettier-config/README.md)

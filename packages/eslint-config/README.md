@@ -7,7 +7,7 @@ This is a group of shareable ESLint configurations.
 ### Install the npm package in your repository
 
 ```bash
-npm install @ostermann/eslint-config
+npm install --save-dev --save-exact @ostermann/eslint-config
 ```
 
 ### Install dependencies in your repository
