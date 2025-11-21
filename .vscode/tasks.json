@@ -1,0 +1,39 @@
+{
+  "version": "2.0.0",
+  "tasks": [
+    /* eslint-config */
+    {
+      "label": "eslint-config - barrelize",
+      "type": "shell",
+      "command": "npm run codegen:barrel --workspace @ostermann/eslint-config",
+      "problemMatcher": [],
+      "presentation": {
+        "panel": "dedicated",
+        "close": false
+      }
+    },
+    {
+      "label": "eslint-config - build",
+      "type": "shell",
+      "command": "npm run build --workspace @ostermann/eslint-config",
+      "problemMatcher": [],
+      "presentation": {
+        "panel": "dedicated",
+        "close": false
+      }
+    },
+    /* prettier-config */
+    {
+      "label": "prettier-config - build",
+      "type": "shell",
+      "command": "npm run build --workspace @ostermann/prettier-config",
+      "problemMatcher": [],
+      "presentation": {
+        "panel": "dedicated",
+        "close": false
+      }
+    }
+    /* Other */
+  ],
+  "inputs": []
+}

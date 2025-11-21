@@ -1,0 +1,67 @@
+{
+  "name": "@ostermann/eslint-config",
+  "description": "ESLint configurations",
+  "contributors": [
+    {
+      "name": "Robert Ostermann",
+      "url": "https://github.com/RobertOstermann"
+    }
+  ],
+  "license": "MIT",
+  "version": "0.0.2",
+  "type": "module",
+  "homepage": "https://github.com/RobertOstermann/npm-packages",
+  "bugs": {
+    "url": "https://github.com/RobertOstermann/npm-packages/issues"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/RobertOstermann/npm-packages",
+    "directory": "packages/eslint-config"
+  },
+  "exports": {
+    ".": "./src/index.js"
+  },
+  "keywords": [
+    "eslint",
+    "eslintconfig",
+    "ostermann",
+    "prettier"
+  ],
+  "publishConfig": {
+    "access": "public"
+  },
+  "scripts": {
+    "preinstall": "npx only-allow npm",
+    "prepublishOnly": "npm run codegen:barrel",
+    "lint": "eslint src",
+    "fix": "eslint src --fix",
+    "codegen:barrel": "barrelize"
+  },
+  "devDependencies": {
+    "barrelize": "1.6.4"
+  },
+  "peerDependencies": {
+    "@eslint/js": ">= 9",
+    "@stylistic/eslint-plugin": ">= 5",
+    "@tanstack/eslint-plugin-query": ">= 5",
+    "@tanstack/eslint-plugin-router": ">= 1",
+    "eslint": ">= 9",
+    "eslint-config-prettier": ">= 10",
+    "eslint-import-resolver-typescript": ">= 4",
+    "eslint-plugin-better-tailwindcss": ">= 3",
+    "eslint-plugin-check-file": ">= 3",
+    "eslint-plugin-i18next": ">= 6",
+    "eslint-plugin-import": ">= 2",
+    "eslint-plugin-import-newlines": ">= 1",
+    "eslint-plugin-no-relative-import-paths": ">= 1",
+    "eslint-plugin-prettier": ">= 5",
+    "eslint-plugin-react": ">= 7",
+    "eslint-plugin-react-hooks": ">= 7",
+    "eslint-plugin-simple-import-sort": ">= 12",
+    "eslint-plugin-tsdoc": ">= 0.4",
+    "eslint-plugin-unused-imports": ">= 4",
+    "typescript": ">= 5",
+    "typescript-eslint": ">= 8"
+  }
+}

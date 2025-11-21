@@ -1,0 +1,13 @@
+{
+  "$schema": "../../node_modules/barrelize/schema.json",
+  "singleQuote": false,
+  "barrels": [
+    {
+      "root": "src",
+      "name": "index.js",
+      "include": [
+        "**/config/**/*.js"
+      ]
+    }
+  ]
+}
