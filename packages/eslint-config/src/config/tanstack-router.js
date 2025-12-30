@@ -1,6 +1,7 @@
 /* eslint-disable no-useless-escape */
 import tanstackRouterPlugin from "@tanstack/eslint-plugin-router";
 import { defineConfig } from "eslint/config";
+import reactRefresh from "eslint-plugin-react-refresh";
 import simpleImportSortPlugin from "eslint-plugin-simple-import-sort";
 
 import { commonIgnores } from "../utilities/utilities.js";
@@ -119,6 +120,9 @@ export const tanstackRouterConfig = defineConfig(
       // Files starting with _ are pathless layout routes.
       "**/routes/**/_*",
     ],
+    plugins: {
+      "react-refresh": reactRefresh,
+    },
     rules: {
       // check-file
       "check-file/filename-naming-convention": [
@@ -145,6 +149,8 @@ export const tanstackRouterConfig = defineConfig(
           ignoreWords: ["{-$locale}"],
         },
       ],
+      // react-refresh
+      "react-refresh/only-export-components": "error",
     },
   },
   // Disable filename conventions
