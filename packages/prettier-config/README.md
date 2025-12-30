@@ -79,7 +79,7 @@ npm run build --workspace @ostermann/prettier-config
 2. Update the version in [package.json](./package.json)
 3. Update the [CHANGELOG](./CHANGELOG.md)
 4. Run the build
-5. Deploy the package
+5. Deploy the package with `npm run publish-prettier-config`
 
 ---
 
