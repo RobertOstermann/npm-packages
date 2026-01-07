@@ -64,13 +64,6 @@ export const baseConfig = defineConfig(
       "import/consistent-type-specifier-style": ["error", "prefer-top-level"],
       "import/first": "error",
       "import/newline-after-import": "error",
-      "import/no-cycle": [
-        "error",
-        {
-          maxDepth: 10,
-          ignoreExternal: true,
-        },
-      ],
       "import/no-default-export": "error",
       "import/no-duplicates": "error",
       "import/no-empty-named-blocks": "error",
@@ -91,7 +84,7 @@ export const baseConfig = defineConfig(
       "@tanstack/query": tanstackQueryPlugin,
       "check-file": checkFilePlugin,
       "react-hooks": reactHooksPlugin,
-      "simple-import-sort": simpleImportSortPlugin,
+      import: importPlugin,
     },
     extends: [
       tseslint.configs.eslintRecommended,
@@ -102,6 +95,12 @@ export const baseConfig = defineConfig(
     settings: {
       react: {
         version: "detect",
+      },
+      "import/resolver": {
+        typescript: {},
+      },
+      "import/parsers": {
+        "@typescript-eslint/parser": [".ts", ".tsx"],
       },
     },
     languageOptions: {
@@ -146,6 +145,14 @@ export const baseConfig = defineConfig(
           errorMessage:
             'The filename "{{ target }}" does not match the "{{ pattern }}" pattern. See the README for details',
           ignoreMiddleExtensions: true,
+        },
+      ],
+      // import
+      "import/no-cycle": [
+        "error",
+        {
+          maxDepth: 10,
+          ignoreExternal: true,
         },
       ],
       // react

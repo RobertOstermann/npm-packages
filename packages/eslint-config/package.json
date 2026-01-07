@@ -8,7 +8,7 @@
     }
   ],
   "license": "MIT",
-  "version": "0.0.3",
+  "version": "0.0.4",
   "type": "module",
   "homepage": "https://github.com/RobertOstermann/npm-packages",
   "bugs": {
@@ -39,7 +39,7 @@
     "codegen:barrel": "barrelize"
   },
   "devDependencies": {
-    "barrelize": "1.6.4"
+    "barrelize": "1.7.2"
   },
   "peerDependencies": {
     "@eslint/js": ">= 9",
