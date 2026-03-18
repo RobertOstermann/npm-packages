@@ -35,7 +35,7 @@ const config: Config = {
   printWidth: 80,
   tabWidth: 2,
   /* Plugins */
-  plugins: ["prettier-plugin-ignored"],
+  plugins: ["prettier-plugin-ignored", "prettier-plugin-packagejson"],
   /* File and folder overrides */
   overrides: [
     {

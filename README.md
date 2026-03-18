@@ -22,7 +22,26 @@ npm install --save-dev --save-exact @ostermann/prettier-config
 
 See the documentation of individual packages for their usage.
 
+## Publish
+
+Login
+
+```sh
+npm login
+```
+
+Publish
+
+```sh
+npm publish --workspace @ostermann/eslint-config
+npm publish --workspace @ostermann/prettier-config
+```
+
 ## Docs
 
 - [eslint-config](./packages/eslint-config/README.md)
 - [prettier-config](./packages/prettier-config/README.md)
+
+```
+
+```

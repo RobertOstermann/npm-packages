@@ -4,6 +4,7 @@ import { defineConfig } from "eslint/config";
 import checkFilePlugin from "eslint-plugin-check-file";
 import importPlugin from "eslint-plugin-import";
 import noRelativeImportPaths from "eslint-plugin-no-relative-import-paths";
+import packageJsonPlugin from "eslint-plugin-package-json";
 import prettierPluginRecommended from "eslint-plugin-prettier/recommended";
 import reactPlugin from "eslint-plugin-react";
 import reactHooksPlugin from "eslint-plugin-react-hooks";
@@ -48,6 +49,18 @@ export const baseConfig = defineConfig(
   commonIgnores,
   eslint.configs.recommended,
   prettierPluginRecommended,
+  // Rules for package.json files
+  {
+    extends: [
+      packageJsonPlugin.configs.recommended,
+      packageJsonPlugin.configs.stylistic,
+    ],
+    files: ["**/package.json"],
+    rules: {
+      "package-json/require-files": "off",
+      "package-json/require-sideEffects": "off",
+    },
+  },
   // Rules for all js/ts files
   {
     files: ["**/*.js", "**/*.jsx", "**/*.ts", "**/*.tsx"],

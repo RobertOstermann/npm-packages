@@ -5,6 +5,10 @@ All notable changes to this project will be documented in this file.
 The format is based on [Keep a Changelog](http://keepachangelog.com/)
 and this project adheres to [Semantic Versioning](http://semver.org/).
 
+## [0.0.5] - 2026-03-18
+
+- Add [eslint-plugin-package-json](https://github.com/michaelfaith/eslint-plugin-package-json) to the `baseConfig`.
+
 ## [0.0.4] - 2025-12-30
 
 - Fix `import/no-cycle` rule. Only apply it to TypeScript files.

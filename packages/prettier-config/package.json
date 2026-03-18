@@ -1,15 +1,12 @@
 {
   "name": "@ostermann/prettier-config",
+  "version": "0.0.4",
   "description": "Prettier configurations",
-  "contributors": [
-    {
-      "name": "Robert Ostermann",
-      "url": "https://github.com/RobertOstermann"
-    }
+  "keywords": [
+    "config",
+    "ostermann",
+    "prettier"
   ],
-  "license": "MIT",
-  "version": "0.0.3",
-  "type": "module",
   "homepage": "https://github.com/RobertOstermann/npm-packages",
   "bugs": {
     "url": "https://github.com/RobertOstermann/npm-packages/issues"
@@ -19,6 +16,14 @@
     "url": "https://github.com/RobertOstermann/npm-packages",
     "directory": "packages/prettier-config"
   },
+  "license": "MIT",
+  "contributors": [
+    {
+      "name": "Robert Ostermann",
+      "url": "https://github.com/RobertOstermann"
+    }
+  ],
+  "type": "module",
   "exports": {
     ".": "./dist/index.js",
     "./*": "./dist/*.js"
@@ -27,30 +32,27 @@
   "files": [
     "dist"
   ],
-  "keywords": [
-    "config",
-    "ostermann",
-    "prettier"
-  ],
-  "publishConfig": {
-    "access": "public"
-  },
   "scripts": {
-    "preinstall": "npx only-allow npm",
-    "prepublishOnly": "npm run build",
     "build": "rm -rf dist && tsc",
-    "ts:check": "tsc --skipLibCheck --noEmit",
+    "fix": "eslint src --fix",
+    "preinstall": "npx only-allow npm",
     "lint": "eslint src",
-    "fix": "eslint src --fix"
+    "prepublishOnly": "npm run build",
+    "ts:check": "tsc --skipLibCheck --noEmit"
   },
   "devDependencies": {
-    "prettier": "3.6.2",
+    "prettier": "3.8.1",
     "prettier-plugin-ignored": "1.0.0",
-    "prettier-plugin-tailwindcss": "0.7.1"
+    "prettier-plugin-packagejson": "3.0.2",
+    "prettier-plugin-tailwindcss": "0.7.2"
   },
   "peerDependencies": {
     "prettier": ">= 3",
     "prettier-plugin-ignored": ">= 1",
+    "prettier-plugin-packagejson": ">= 3",
     "prettier-plugin-tailwindcss": ">= 0.7"
+  },
+  "publishConfig": {
+    "access": "public"
   }
 }
