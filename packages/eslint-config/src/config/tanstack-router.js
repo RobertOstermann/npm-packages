@@ -150,7 +150,10 @@ export const tanstackRouterConfig = defineConfig(
         },
       ],
       // react-refresh
-      "react-refresh/only-export-components": "error",
+      "react-refresh/only-export-components": [
+        "error",
+        { extraHOCs: ["createRootRouteWithContext", "createFileRoute"] },
+      ],
     },
   },
   // Disable filename conventions
