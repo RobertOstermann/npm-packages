@@ -45,7 +45,7 @@ import { commonIgnores } from "../utilities/utilities.js";
  * });
  * ```
  */
-export const baseConfig = defineConfig(
+export const baseConfig = defineConfig([
   commonIgnores,
   eslint.configs.recommended,
   prettierPluginRecommended,
@@ -218,4 +218,4 @@ export const baseConfig = defineConfig(
       "import/no-default-export": "off",
     },
   },
-);
+]);

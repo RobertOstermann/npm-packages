@@ -9,7 +9,7 @@ import { commonIgnores } from "../utilities/utilities.js";
  * This configuration configures ESLint for use in project
  * with an i18next setup.
  */
-export const i18nextConfig = defineConfig(
+export const i18nextConfig = defineConfig([
   commonIgnores,
   i18next.configs["flat/recommended"],
-);
+]);

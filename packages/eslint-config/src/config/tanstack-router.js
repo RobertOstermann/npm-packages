@@ -51,7 +51,7 @@ import { commonIgnores } from "../utilities/utilities.js";
  * });
  * ```
  */
-export const tanstackRouterConfig = defineConfig(
+export const tanstackRouterConfig = defineConfig([
   commonIgnores,
   // Rules for all js/ts files
   {
@@ -176,4 +176,4 @@ export const tanstackRouterConfig = defineConfig(
       "check-file/filename-naming-convention": "off",
     },
   },
-);
+]);

@@ -5,7 +5,7 @@ import {
   tailwindConfig,
 } from "./packages/eslint-config/src/index.js";
 
-export default defineConfig(
+export default defineConfig([
   {
     extends: [baseConfig, tailwindConfig()],
   },
@@ -18,4 +18,4 @@ export default defineConfig(
       "no-relative-import-paths/no-relative-import-paths": "off",
     },
   },
-);
+]);

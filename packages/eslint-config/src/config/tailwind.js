@@ -37,33 +37,36 @@ import { commonIgnores } from "../utilities/utilities.js";
  * @param {Props} [props]
  */
 export const tailwindConfig = (props) =>
-  defineConfig(commonIgnores, {
-    files: ["**/*.ts", "**/*.tsx"],
-    plugins: {
-      "better-tailwindcss": tailwindPlugin,
-    },
-    settings: {
-      react: {
-        version: "detect",
+  defineConfig([
+    commonIgnores,
+    {
+      files: ["**/*.ts", "**/*.tsx"],
+      plugins: {
+        "better-tailwindcss": tailwindPlugin,
       },
-      "better-tailwindcss": props
-        ? props
-        : {
-            entryPoint: "src/styles/tailwind.css",
+      settings: {
+        react: {
+          version: "detect",
+        },
+        "better-tailwindcss": props
+          ? props
+          : {
+              entryPoint: "src/styles/tailwind.css",
+            },
+      },
+      languageOptions: {
+        parserOptions: {
+          projectService: true,
+          tsconfigRootDir: import.meta.dirname,
+          ecmaFeatures: {
+            jsx: true,
           },
-    },
-    languageOptions: {
-      parserOptions: {
-        projectService: true,
-        tsconfigRootDir: import.meta.dirname,
-        ecmaFeatures: {
-          jsx: true,
         },
       },
+      rules: {
+        // better-tailwindcss
+        "better-tailwindcss/enforce-consistent-variable-syntax": "error",
+        "better-tailwindcss/enforce-shorthand-classes": "error",
+      },
     },
-    rules: {
-      // better-tailwindcss
-      "better-tailwindcss/enforce-consistent-variable-syntax": "error",
-      "better-tailwindcss/enforce-shorthand-classes": "error",
-    },
-  });
+  ]);
