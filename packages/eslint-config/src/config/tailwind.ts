@@ -1,22 +1,21 @@
+import type { Linter } from "eslint";
 import { defineConfig } from "eslint/config";
 import tailwindPlugin from "eslint-plugin-better-tailwindcss";
 
 import { commonIgnores } from "../utilities/utilities.js";
 
-/**
- * @typedef {Object} BetterTailwindProps
- * @property {string|undefined} entryPoint
- * @property {string|undefined} tailwindConfig
- *
- * @typedef {BetterTailwindProps | undefined} Props
- */
+interface TailwindProps {
+  /** The entry point for the Tailwind CSS stylesheet. @default "src/styles/tailwind.css" */
+  entryPoint?: string;
+  /** The path to the Tailwind CSS configuration file. */
+  tailwindConfig?: string;
+}
 
 /**
  * ### Tailwind ESLint Configuration
  *
  * This configuration configures ESLint for use in project
  * with a Tailwind setup.
- *
  *
  * This eslint config expects the tailwind stylesheet to be located at `src/styles/tailwind.css`.
  * The stylesheet or tailwind config can be customized.
@@ -34,9 +33,9 @@ import { commonIgnores } from "../utilities/utilities.js";
  * });
  * ```
  *
- * @param {Props} [props]
+ * @param props - Optional Tailwind configuration options.
  */
-export const tailwindConfig = (props) =>
+export const tailwindConfig = (props?: TailwindProps): Linter.Config[] =>
   defineConfig([
     commonIgnores,
     {
@@ -48,11 +47,9 @@ export const tailwindConfig = (props) =>
         react: {
           version: "detect",
         },
-        "better-tailwindcss": props
-          ? props
-          : {
-              entryPoint: "src/styles/tailwind.css",
-            },
+        "better-tailwindcss": props ?? {
+          entryPoint: "src/styles/tailwind.css",
+        },
       },
       languageOptions: {
         parserOptions: {

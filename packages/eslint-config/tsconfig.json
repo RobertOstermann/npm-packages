@@ -4,15 +4,15 @@
     "outDir": "dist",
     "target": "es2024",
     "useDefineForClassFields": true,
-    "module": "es2020",
+    "module": "nodenext",
+    "moduleResolution": "nodenext",
     "lib": ["ES2024"],
 
     /* Bundler mode */
-    "moduleResolution": "bundler",
-    "allowImportingTsExtensions": false,
-    "verbatimModuleSyntax": true,
     "noEmit": false,
     "declaration": true,
+    "declarationMap": true,
+    "sourceMap": true,
 
     /* Linting */
     "strict": true,
@@ -23,14 +23,10 @@
     "resolveJsonModule": true,
     "isolatedModules": true,
     "noUncheckedIndexedAccess": true,
-    "jsx": "react-jsx",
     "types": ["node"],
 
     /* Project Setup */
     "rootDir": "src",
-    "paths": {
-      "@/*": ["./src/*"]
-    },
 
     /* Plugins */
     "plugins": [
@@ -43,5 +39,5 @@
     ]
   },
   "include": ["src"],
-  "exclude": ["node_modules"]
+  "exclude": ["node_modules", "dist"]
 }

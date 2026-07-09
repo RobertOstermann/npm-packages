@@ -5,6 +5,14 @@ All notable changes to this project will be documented in this file.
 The format is based on [Keep a Changelog](http://keepachangelog.com/)
 and this project adheres to [Semantic Versioning](http://semver.org/).
 
+## [0.0.7] - 2026-07-09
+
+- Migrate config files to TypeScript for automatic type generation.
+- Add `tsconfig.json` to generate `.d.ts` declaration files on build.
+- Separate React-specific rules into a dedicated `reactConfig`.
+- Remove React, React Hooks, and TanStack Query rules from `baseConfig` to make it usable in non-React projects.
+- Move `ecmaFeatures.jsx` and `react` settings from `baseConfig` to `reactConfig`.
+
 ## [0.0.6] - 2026-03-18
 
 - Update [eslint-plugin-react-refresh](https://github.com/ArnaudBarre/eslint-plugin-react-refresh/releases/tag/v0.5.0)

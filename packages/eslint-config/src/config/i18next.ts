@@ -1,3 +1,4 @@
+import type { Linter } from "eslint";
 import { defineConfig } from "eslint/config";
 import i18next from "eslint-plugin-i18next";
 
@@ -11,5 +12,5 @@ import { commonIgnores } from "../utilities/utilities.js";
  */
 export const i18nextConfig = defineConfig([
   commonIgnores,
-  i18next.configs["flat/recommended"],
+  i18next.configs["flat/recommended"] as unknown as Linter.Config,
 ]);

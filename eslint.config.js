@@ -1,13 +1,10 @@
 import { defineConfig } from "eslint/config";
 
-import {
-  baseConfig,
-  tailwindConfig,
-} from "./packages/eslint-config/src/index.js";
+import { baseConfig } from "./packages/eslint-config/dist/index.js";
 
 export default defineConfig([
   {
-    extends: [baseConfig, tailwindConfig()],
+    extends: [baseConfig],
   },
   // Allow default exports
   {

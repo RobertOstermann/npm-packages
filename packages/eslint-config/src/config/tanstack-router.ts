@@ -1,5 +1,6 @@
 /* eslint-disable no-useless-escape */
 import tanstackRouterPlugin from "@tanstack/eslint-plugin-router";
+import type { ESLint } from "eslint";
 import { defineConfig } from "eslint/config";
 import reactRefresh from "eslint-plugin-react-refresh";
 import simpleImportSortPlugin from "eslint-plugin-simple-import-sort";
@@ -89,7 +90,7 @@ export const tanstackRouterConfig = defineConfig([
   {
     files: ["**/*.ts", "**/*.tsx"],
     plugins: {
-      "@tanstack/router": tanstackRouterPlugin,
+      "@tanstack/router": tanstackRouterPlugin as unknown as ESLint.Plugin,
     },
     settings: {
       react: {

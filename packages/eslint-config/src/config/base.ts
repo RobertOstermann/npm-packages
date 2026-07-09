@@ -1,13 +1,10 @@
 import eslint from "@eslint/js";
-import tanstackQueryPlugin from "@tanstack/eslint-plugin-query";
 import { defineConfig } from "eslint/config";
 import checkFilePlugin from "eslint-plugin-check-file";
 import importPlugin from "eslint-plugin-import";
 import noRelativeImportPaths from "eslint-plugin-no-relative-import-paths";
 import packageJsonPlugin from "eslint-plugin-package-json";
 import prettierPluginRecommended from "eslint-plugin-prettier/recommended";
-import reactPlugin from "eslint-plugin-react";
-import reactHooksPlugin from "eslint-plugin-react-hooks";
 import simpleImportSortPlugin from "eslint-plugin-simple-import-sort";
 import tseslint from "typescript-eslint";
 
@@ -16,7 +13,7 @@ import { commonIgnores } from "../utilities/utilities.js";
 /**
  * ### Base ESLint Configuration
  *
- * This configuration configures ESLint for use in a React project.
+ * This configuration configures ESLint for use in a TypeScript project.
  *
  * This eslint config works well with a route alias setup in the `tsconfig.json` file.
  *
@@ -94,17 +91,10 @@ export const baseConfig = defineConfig([
   {
     files: ["**/*.ts", "**/*.tsx"],
     plugins: {
-      "@tanstack/query": tanstackQueryPlugin,
       "check-file": checkFilePlugin,
-      "react-hooks": reactHooksPlugin,
       import: importPlugin,
     },
-    extends: [
-      tseslint.configs.eslintRecommended,
-      tseslint.configs.recommended,
-      reactPlugin.configs.flat.recommended,
-      reactPlugin.configs.flat["jsx-runtime"],
-    ],
+    extends: [tseslint.configs.eslintRecommended, tseslint.configs.recommended],
     settings: {
       react: {
         version: "detect",
@@ -126,11 +116,6 @@ export const baseConfig = defineConfig([
       },
     },
     rules: {
-      // @tanstack
-      "@tanstack/query/exhaustive-deps": "error",
-      "@tanstack/query/no-rest-destructuring": "error",
-      "@tanstack/query/no-unstable-deps": "error",
-      "@tanstack/query/stable-query-client": "error",
       // typescript-eslint
       "@typescript-eslint/ban-ts-comment": "off",
       "@typescript-eslint/consistent-type-exports": "error",
@@ -168,23 +153,6 @@ export const baseConfig = defineConfig([
           ignoreExternal: true,
         },
       ],
-      // react
-      "react/display-name": "off",
-      "react/jsx-boolean-value": [
-        "error",
-        "always",
-        { assumeUndefinedIsFalse: false },
-      ],
-      "react/jsx-curly-brace-presence": "error",
-      "react/jsx-uses-react": "error",
-      "react/no-children-prop": ["error", { allowFunctions: true }],
-      "react/no-unescaped-entities": "off",
-      "react/react-in-jsx-scope": "off",
-      "react/self-closing-comp": "error",
-      // react-hooks
-      "react-hooks/exhaustive-deps": "error",
-      "react-hooks/rules-of-hooks": "error",
-      "react-hooks/react-compiler": "off",
       // tsdoc
       "tsdoc/syntax": "off",
       // other
@@ -198,13 +166,7 @@ export const baseConfig = defineConfig([
   },
   // Disable filename conventions
   {
-    files: [
-      "src/main.tsx",
-      "src/components/shadcn/**/*",
-      "src/types/global/**/*",
-      "**/codegen/**/*",
-      "**/*.d.ts",
-    ],
+    files: ["**/codegen/**/*", "**/*.d.ts"],
     rules: {
       // check-file
       "check-file/filename-naming-convention": "off",

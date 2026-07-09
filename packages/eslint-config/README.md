@@ -39,10 +39,10 @@ Or using a specific configuration:
 ```js
 import { defineConfig } from "eslint/config";
 
-import { baseConfig, tanstackRouterConfig } from "@ostermann/eslint-config";
+import { reactConfig, tanstackRouterConfig } from "@ostermann/eslint-config";
 
 export default defineConfig({
-  extends: [baseConfig, tanstackRouterConfig],
+  extends: [reactConfig, tanstackRouterConfig],
 });
 ```
 

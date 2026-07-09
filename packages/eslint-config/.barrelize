@@ -4,10 +4,13 @@
   "barrels": [
     {
       "root": "src",
-      "name": "index.js",
+      "name": "index.ts",
       "include": [
-        "**/config/**/*.js"
-      ]
+        "**/config/**/*.ts"
+      ],
+      "replace": {
+        "/\\.ts$/": ".js"
+      }
     }
   ]
 }
