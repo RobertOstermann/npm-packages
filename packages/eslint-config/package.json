@@ -1,6 +1,6 @@
 {
   "name": "@ostermann/eslint-config",
-  "version": "0.0.8",
+  "version": "0.0.9",
   "description": "ESLint configurations",
   "keywords": [
     "eslint",
@@ -32,6 +32,9 @@
     }
   },
   "types": "./dist/index.d.ts",
+  "files": [
+    "dist"
+  ],
   "scripts": {
     "build": "barrelize && rm -rf dist && tsc",
     "fix": "eslint src --fix",
