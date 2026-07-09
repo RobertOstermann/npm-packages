@@ -5,6 +5,10 @@ All notable changes to this project will be documented in this file.
 The format is based on [Keep a Changelog](http://keepachangelog.com/)
 and this project adheres to [Semantic Versioning](http://semver.org/).
 
+## [0.0.8] - 2026-07-09
+
+- Mark some `peerDependencies` as `optional`
+
 ## [0.0.7] - 2026-07-09
 
 - Migrate config files to TypeScript for automatic type generation.
