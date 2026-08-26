@@ -62,6 +62,7 @@ export const baseConfig = defineConfig([
   {
     files: ["**/*.js", "**/*.jsx", "**/*.ts", "**/*.tsx"],
     plugins: {
+      // @ts-ignore
       "no-relative-import-paths": noRelativeImportPaths,
       "simple-import-sort": simpleImportSortPlugin,
       import: importPlugin,

@@ -1,6 +1,6 @@
 {
   "name": "@ostermann/eslint-config",
-  "version": "0.0.10",
+  "version": "0.1.0",
   "description": "ESLint configurations",
   "keywords": [
     "eslint",
@@ -43,44 +43,44 @@
     "prepublishOnly": "npm run build"
   },
   "devDependencies": {
-    "@eslint/js": "9.39.2",
+    "@eslint/js": "10.0.1",
     "@stylistic/eslint-plugin": "5.10.0",
-    "@tanstack/eslint-plugin-query": "5.101.2",
+    "@tanstack/eslint-plugin-query": "5.102.5",
     "@tanstack/eslint-plugin-router": "1.162.0",
-    "barrelize": "1.8.2",
-    "eslint": "9.39.4",
+    "barrelize": "1.9.2",
+    "eslint": "10.9.1",
     "eslint-config-prettier": "10.1.8",
     "eslint-import-resolver-typescript": "4.4.5",
-    "eslint-plugin-better-tailwindcss": "4.6.1",
-    "eslint-plugin-check-file": "3.3.1",
+    "eslint-plugin-better-tailwindcss": "4.7.0",
+    "eslint-plugin-check-file": "3.3.2",
     "eslint-plugin-i18next": "6.1.5",
     "eslint-plugin-import": "2.32.0",
-    "eslint-plugin-import-newlines": "1.4.0",
+    "eslint-plugin-import-newlines": "2.0.0",
     "eslint-plugin-no-relative-import-paths": "1.6.1",
-    "eslint-plugin-package-json": "1.5.0",
+    "eslint-plugin-package-json": "1.7.1",
     "eslint-plugin-prettier": "5.5.6",
     "eslint-plugin-react": "7.37.5",
     "eslint-plugin-react-hooks": "7.1.1",
-    "eslint-plugin-react-refresh": "0.5.3",
-    "eslint-plugin-simple-import-sort": "13.0.0",
+    "eslint-plugin-react-refresh": "0.5.5",
+    "eslint-plugin-simple-import-sort": "14.0.0",
     "eslint-plugin-tsdoc": "0.5.2",
     "eslint-plugin-unused-imports": "4.4.1",
     "typescript": "5.9.3",
-    "typescript-eslint": "8.63.0"
+    "typescript-eslint": "8.68.0"
   },
   "peerDependencies": {
-    "@eslint/js": ">= 9",
+    "@eslint/js": ">= 10",
     "@stylistic/eslint-plugin": ">= 5",
     "@tanstack/eslint-plugin-query": ">= 5",
     "@tanstack/eslint-plugin-router": ">= 1",
-    "eslint": ">= 9",
+    "eslint": ">= 10",
     "eslint-config-prettier": ">= 10",
     "eslint-import-resolver-typescript": ">= 4",
     "eslint-plugin-better-tailwindcss": ">= 3",
     "eslint-plugin-check-file": ">= 3",
     "eslint-plugin-i18next": ">= 6",
     "eslint-plugin-import": ">= 2",
-    "eslint-plugin-import-newlines": ">= 1",
+    "eslint-plugin-import-newlines": ">= 2",
     "eslint-plugin-no-relative-import-paths": ">= 1",
     "eslint-plugin-package-json": ">= 1",
     "eslint-plugin-prettier": ">= 5",
@@ -95,5 +95,6 @@
   },
   "publishConfig": {
     "access": "public"
-  }
+  },
+  "readme": "https://github.com/RobertOstermann/npm-packages/blob/develop/packages/eslint-config/README.md"
 }

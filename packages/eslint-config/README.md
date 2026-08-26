@@ -89,11 +89,9 @@ npm run build --workspace @ostermann/eslint-config
 ### Creating or updating a config
 
 1. Create or update the eslint configuration
-2. Run the `npm run codegen:barrel --workspace @ostermann/eslint-config` command.
-   This will update the [index.js](./src/index.js) to export the updated configuration.
-3. Update the version in [package.json](./package.json)
-4. Update the [CHANGELOG](./CHANGELOG.md)
-5. Deploy the package with `npm run publish-eslint-config`
+2. Update the version in [package.json](./package.json)
+3. Update the [CHANGELOG](./CHANGELOG.md)
+4. Deploy the package with `npm run publish-eslint-config`
 
 ---
 

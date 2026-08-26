@@ -54,5 +54,6 @@
   },
   "publishConfig": {
     "access": "public"
-  }
+  },
+  "readme": "https://github.com/RobertOstermann/npm-packages/blob/develop/packages/prettier-config/README.md"
 }
