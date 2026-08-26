@@ -1,6 +1,6 @@
 {
   "name": "@ostermann/eslint-config",
-  "version": "0.0.9",
+  "version": "0.0.10",
   "description": "ESLint configurations",
   "keywords": [
     "eslint",
@@ -92,38 +92,6 @@
     "eslint-plugin-unused-imports": ">= 4",
     "typescript": ">= 5",
     "typescript-eslint": ">= 8"
-  },
-  "peerDependenciesMeta": {
-    "@stylistic/eslint-plugin": {
-      "optional": true
-    },
-    "@tanstack/eslint-plugin-query": {
-      "optional": true
-    },
-    "@tanstack/eslint-plugin-router": {
-      "optional": true
-    },
-    "eslint-plugin-better-tailwindcss": {
-      "optional": true
-    },
-    "eslint-plugin-i18next": {
-      "optional": true
-    },
-    "eslint-plugin-import-newlines": {
-      "optional": true
-    },
-    "eslint-plugin-react": {
-      "optional": true
-    },
-    "eslint-plugin-react-hooks": {
-      "optional": true
-    },
-    "eslint-plugin-react-refresh": {
-      "optional": true
-    },
-    "eslint-plugin-unused-imports": {
-      "optional": true
-    }
   },
   "publishConfig": {
     "access": "public"

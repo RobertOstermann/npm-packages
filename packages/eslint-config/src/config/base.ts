@@ -96,9 +96,6 @@ export const baseConfig = defineConfig([
     },
     extends: [tseslint.configs.eslintRecommended, tseslint.configs.recommended],
     settings: {
-      react: {
-        version: "detect",
-      },
       "import/resolver": {
         typescript: {},
       },
@@ -110,9 +107,6 @@ export const baseConfig = defineConfig([
       parserOptions: {
         projectService: true,
         tsconfigRootDir: import.meta.dirname,
-        ecmaFeatures: {
-          jsx: true,
-        },
       },
     },
     rules: {
